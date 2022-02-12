@@ -1,0 +1,9 @@
+name : learn-gha
+on : [push]
+jobs:
+    check-build:
+      runs-on: ubuntu-latest
+      steps:
+        -uses: actions/checkout@v2
+        -run: make
+        -run: ls -l
